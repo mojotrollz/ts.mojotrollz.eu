@@ -11,12 +11,12 @@ class default_page extends SYSTEM\PAGE\Page {
         return  '<link rel="stylesheet" href="'.\LIB\lib_bootstrap::css().'" type="text/css" />'.
                 '<link rel="stylesheet" href="'.\LIB\lib_system::css().'" type="text/css" />'.
                 '<link rel="stylesheet" href="'.\SYSTEM\WEBPATH(new PPAGE(),'default_page/css/default_page.css').'" type="text/css" />'.
-                '<link rel="stylesheet" href="'.\SYSTEM\SERVERPATH(new PLIB(),'tsstatus/tsstatus.css').'" type="text/css" />';}
+                '<link rel="stylesheet" href="'.\SYSTEM\WEBPATH(new PLIB(),'tsstatus/tsstatus.css').'" type="text/css" />';}
                 
     private static function ts_app(){
         $ts = new TSStatus('mojotrollz.eu');
         $ts->setLoginPassword('mojotrollztsquery', '9aYllYkG');
-        $ts->imagePath = \SYSTEM\SERVERPATH(new PLIB(),'tsstatus/img/');
+        $ts->imagePath = \SYSTEM\WEBPATH(new PLIB(),'tsstatus/img/');
         return $ts->render();
     }
                 
