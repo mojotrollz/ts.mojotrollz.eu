@@ -14,7 +14,7 @@ class default_page extends SYSTEM\PAGE\Page {
                 '<link rel="stylesheet" href="'.\SYSTEM\WEBPATH(new PLIB(),'tsstatus/tsstatus.css').'" type="text/css" />';}
                 
     private static function ts_app(){
-        $ts = new TSStatus('mojotrollz.eu');
+        $ts = new TSStatus('127.0.0.1');
         $ts->setLoginPassword('mojotrollztsquery', '9aYllYkG');
         $ts->imagePath = \SYSTEM\WEBPATH(new PLIB(),'tsstatus/img/');
         return $ts->render();
