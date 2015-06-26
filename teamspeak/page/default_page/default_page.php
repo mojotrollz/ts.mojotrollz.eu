@@ -6,7 +6,7 @@ class default_page extends SYSTEM\PAGE\Page {
                 '<script src="'.\LIB\lib_bootstrap::js().'" type="text/javascript"></script>'.
                 '<script src="'.\LIB\lib_jqbootstrapvalidation::js().'" type="text/javascript"></script>'.
                 '<script type="text/javascript" src="'.\SYSTEM\WEBPATH(new PPAGE(),'default_page/js/default_page.js').'"></script>'.
-                '<script type="text/javascript" src="'.\SYSTEM\SERVERPATH(new PLIB(),'tsstatus/tsstatus.js').'"></script>';}
+                '<script type="text/javascript" src="'.\SYSTEM\WEBPATH(new PLIB(),'tsstatus/tsstatus.js').'"></script>';}
     public static function css(){
         return  '<link rel="stylesheet" href="'.\LIB\lib_bootstrap::css().'" type="text/css" />'.
                 '<link rel="stylesheet" href="'.\LIB\lib_system::css().'" type="text/css" />'.
