@@ -30,7 +30,7 @@ class TSStatus
 	public $hideEmptyChannels;
 	public $hideParentChannels;
 
-	public function TSStatus($host, $queryPort = 10011)
+	public function __construct($host, $queryPort = 10011)
 	{
 		$this->_host = $host;
 		$this->_queryPort = $queryPort;
