@@ -1,5 +1,5 @@
 <?php
 class PSAI extends \SYSTEM\PATH {
-    public static function getPath(){
-        return \SYSTEM\C_ROOT.'webcraft/sai/'.\SYSTEM\C_SUBPATH;}
+    public function __construct($subpath = '') {
+        parent::__construct(new \SYSTEM\PROOT(), 'teamspeak/sai/', $subpath);}
 }

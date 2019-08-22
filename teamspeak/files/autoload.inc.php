@@ -1,3 +1,3 @@
 <?php
 \SYSTEM\autoload::registerFolder(dirname(__FILE__),'');
-require_once dirname(__FILE__).'/register_files.php';
+\SYSTEM\FILES\files::registerFolder(dirname(__FILE__).'/img/','img','*');

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^(.*)/fonts/fontawesome-webfont(.*)$ lib/system/lib/font_awesome/lib/fonts/fontawesome-webfont$2 [L]
+RewriteRule ^sai$ sai.php$1 [L]
+
+# not working for some reason
+RewriteRule ^(.*)/files/([^/]+)/([^/]+)$ api.php?call=files&cat=$2&id=$3 [L]
+RewriteRule ^cache/([^/]+)/([^/]+)$ api.php?call=cache&id=$1&ident=$2 [L]
