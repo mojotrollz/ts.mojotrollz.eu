@@ -14,8 +14,8 @@ class default_page implements SYSTEM\PAGE\DefaultPage {
                 '<link rel="stylesheet" href="'.(new PLIB('tsstatus/tsstatus.css'))->WEBPATH().'" type="text/css" />';}
                 
     private static function ts_app(){
-        //$ts = new TSStatus('127.0.0.1');
-        $ts = new TSStatus('mojotrollz.eu');
+        $ts = new TSStatus('127.0.0.1');
+        //$ts = new TSStatus('mojotrollz.eu');
         $ts->setLoginPassword('mojotrollztsquery', '9aYllYkG');
         $ts->imagePath = 'api.php?call=files&cat=img&id=';
         return $ts->render();
