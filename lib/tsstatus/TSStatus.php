@@ -24,6 +24,8 @@ class TSStatus
 	private $_javascriptName;
 	private $_socket;
 
+	private $showPasswordBox;
+
 	public $imagePath;
 	public $showNicknameBox;
 	public $timeout;
@@ -219,10 +221,10 @@ class TSStatus
 			}
 
 			$serverGroups = $this->parseLine($lines[4]);
-			foreach ($serverGroups as $sg) if($sg["iconid"] > 0) $this->setServerGroupFlag($sg["sgid"], 'group/icon_' . $sg["iconid"]);
+			foreach ($serverGroups as $sg) if($sg["iconid"] > 0) $this->setServerGroupFlag($sg["sgid"], 'icon_' . $sg["iconid"]);
 
 			$channelGroups = $this->parseLine($lines[5]);
-			foreach ($channelGroups as $cg) if($cg["iconid"] > 0) $this->setChannelGroupFlag($cg["cgid"], 'group/icon_' . $cg["iconid"]);
+			foreach ($channelGroups as $cg) if($cg["iconid"] > 0) $this->setChannelGroupFlag($cg["cgid"], 'icon_' . $cg["iconid"]);
 		}
 		else throw new Exception("Invalid server response");
 	}
