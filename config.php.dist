@@ -5,7 +5,7 @@ function config($basepath){
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_PATH_BASEURL,          'http://www.url.to/project/'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_PATH_BASEPATH,         $basepath.'/'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_TYPE,               \SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_TYPE_MYS),
-                    array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_HOST,               '127.0.0.1'),
+                    array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_HOST,               'localhost'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_PORT,               ''),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_USER,               'db_user'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DB_PASSWORD,           'db_pw'),
