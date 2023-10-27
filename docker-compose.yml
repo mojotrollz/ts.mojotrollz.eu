@@ -6,8 +6,9 @@ services:
       context: ./docker
       dockerfile: ./Dockerfile.mariadb
     environment:
-      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=1
-      - MARIADB_USER=root
+      #- MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=1
+      - MARIADB_ROOT_PASSWORD=SECRET
+      - MARIADB_USER=web
     ports:
       - 3306:3306
     volumes:
@@ -19,6 +20,7 @@ services:
       dockerfile: ./docker/Dockerfile.php
     volumes:
       - ./:/app
+    user: "1000"
 
   nginx:
     build:
