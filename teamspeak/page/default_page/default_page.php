@@ -14,9 +14,8 @@ class default_page implements SYSTEM\PAGE\DefaultPage {
                 '<link rel="stylesheet" href="'.(new PLIB('tsstatus/tsstatus.css'))->WEBPATH().'" type="text/css" />';}
                 
     private static function ts_app(){
-        $ts = new TSStatus('127.0.0.1');
-        //$ts = new TSStatus('mojotrollz.eu');
-        $ts->setLoginPassword('mojotrollztsquery', '9aYllYkG');
+        $ts = new TSStatus(\SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_HOST));
+        $ts->setLoginPassword(\SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_QUERY_USER), \SYSTEM\CONFIG\config::get(\config_ids::TEAMSPEAK_QUERY_PASSWORD));
         $ts->imagePath = 'api.php?call=files&cat=img&id=';
         return $ts->render();
     }
