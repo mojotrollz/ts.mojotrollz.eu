@@ -221,10 +221,10 @@ class TSStatus
 			}
 
 			$serverGroups = $this->parseLine($lines[4]);
-			foreach ($serverGroups as $sg) if($sg["iconid"] > 0) $this->setServerGroupFlag($sg["sgid"], 'icon_' . $sg["iconid"]);
+			foreach ($serverGroups as $sg) if($sg["iconid"] !== 0) $this->setServerGroupFlag($sg["sgid"], 'icon_' . unpack('V',pack('V',$sg["iconid"]))[1]);
 
 			$channelGroups = $this->parseLine($lines[5]);
-			foreach ($channelGroups as $cg) if($cg["iconid"] > 0) $this->setChannelGroupFlag($cg["cgid"], 'icon_' . $cg["iconid"]);
+			foreach ($channelGroups as $cg) if($cg["iconid"] !== 0) $this->setChannelGroupFlag($cg["cgid"], 'icon_' . unpack('V',pack('V',$cg["iconid"]))[1]);
 		}
 		else throw new Exception("Invalid server response");
 	}
