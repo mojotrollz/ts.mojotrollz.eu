@@ -16,6 +16,7 @@ function config($basepath){
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_DEFAULT_LANG,          'deDE'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CONFIG_PATH_CACHE,    	       $basepath.'/cache/'),
                     array(\SYSTEM\CONFIG\config_ids::SYS_CRON_LOG2SQLITE_PATH,         $basepath.'/log/'),
+                    array(\config_ids::WEBCRAFT_BILLING_TOKEN,                         'TOKEN'),
                     array(\config_ids::TEAMSPEAK_HOST,                                 'localhost'),
                     array(\config_ids::TEAMSPEAK_QUERY_USER,                           'queryuser'),
                     array(\config_ids::TEAMSPEAK_QUERY_PASSWORD,                       'SECRET'));
