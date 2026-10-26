@@ -163,7 +163,7 @@ class TSStatus
 		$this->_socket = @fsockopen($this->_host, $this->_queryPort, $errno, $errstr, $this->timeout);
 		if($this->_socket)
 		{
-			@socket_set_timeout($this->_socket, $this->timeout);
+			@stream_set_timeout($this->_socket, $this->timeout);
 			$isTs3 = trim(fgets($this->_socket)) == "TS3";
 			if(!$isTs3) throw new Exception("Not a Teamspeak 3 server/bad query port");
 
